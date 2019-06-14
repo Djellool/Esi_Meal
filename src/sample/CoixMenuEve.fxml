@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.ControllerChoixMenuEve"
+            prefHeight="500.0" prefWidth="600.0">
+    <children>
+        <HBox layoutX="6.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F29141;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Veillez choisir votre menu">
+                    <font>
+                        <Font name="Segoe UI Semibold Italic" size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="150.0" top="25.0" />
+                    </HBox.margin>
+                </Text>
+            </children>
+        </HBox>
+        <TabPane layoutY="100.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Repas">
+                    <content>
+                        <AnchorPane maxWidth="500.0" minHeight="0.0" minWidth="0.0" prefHeight="334.0" prefWidth="500.0">
+                            <children>
+                                <ListView fx:id="listrepas" layoutX="104.0" layoutY="27.0" onMouseClicked="#listedessupplement" prefHeight="200.0" prefWidth="423.0" />
+                                <Text layoutX="104.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repas" />
+                                <Text layoutX="175.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+                                <Text layoutX="242.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+                                <Text layoutX="316.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de calories" />
+                                <Button fx:id="Commander" layoutX="410.0" layoutY="233.0" mnemonicParsing="false" onMouseClicked="#Commander" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #F29141; -fx-background-radius: 20;" text="Commander" textFill="WHITE" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font></Button>
+                                <TextField fx:id="Prixtotale" layoutX="127.0" layoutY="233.0" />
+                                <Text layoutX="30.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix totale :">
+                                    <font>
+                                        <Font name="System Bold Italic" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Boisson">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="listboisson" layoutX="89.0" layoutY="36.0" prefHeight="200.0" prefWidth="431.0" />
+                                <Text layoutX="89.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+                                <Text layoutX="146.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+                                <Text layoutX="216.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+                                <Text layoutX="280.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de calories" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+
+</AnchorPane>
