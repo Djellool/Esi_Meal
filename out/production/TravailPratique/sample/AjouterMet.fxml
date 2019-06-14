@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Anchorpane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AjouterMet">
+   <children>
+      <HBox layoutX="74.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F29141;" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Un Met">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="180.0" top="30.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <TabPane layoutY="100.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <tabs>
+          <Tab text="Repas">
+               <content>
+                  <AnchorPane prefHeight="269.0" prefWidth="497.0">
+                     <children>
+                        <VBox prefHeight="371.0" prefWidth="253.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="347.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="28.0" prefWidth="600.0">
+                                 <children>
+                                    <RadioButton fx:id="Entre" mnemonicParsing="false" selected="true" text="Entre">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Typerepas" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Plat" mnemonicParsing="false" text="Plat" toggleGroup="$Typerepas">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Dessert" mnemonicParsing="false" text="Dessert" toggleGroup="$Typerepas">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="NomRepas">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="PrixRepas">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de calories :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="NBCalRepas">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre d'unites :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="NombreuniteRepas">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <ListView fx:id="Listview" layoutX="300.0" layoutY="77.0" prefHeight="200.0" prefWidth="301.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="0.0" />
+                        <Text layoutX="299.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des supplements possibles :">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="AjouterRepas" layoutX="227.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#jouterRepas" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #F29141; -fx-background-radius: 20;" text="Ajouter" textFill="WHITE" AnchorPane.leftAnchor="238.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Boisson">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="Type :" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="30.0" prefWidth="580.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" selected="true" style="-fx-text-fill: Black;" text="Eau Minerale">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Type" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Jus" toggleGroup="$Type">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Boisson Gaseuse" toggleGroup="$Type">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Cafe" toggleGroup="$Type">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="The" toggleGroup="$Type">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="-2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="Nom">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="400.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marque :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="Marque">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="400.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gout :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="Gout">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="400.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="Prix">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="400.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Calories :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="Nombre_Calorie">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="400.0" top="3.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre D'unites :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="Nombre_unite" prefHeight="25.0" prefWidth="180.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="400.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="Ajouter" layoutX="460.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#Ajouter_Boisson" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #F29141; -fx-background-radius: 20;" text="Ajouter" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

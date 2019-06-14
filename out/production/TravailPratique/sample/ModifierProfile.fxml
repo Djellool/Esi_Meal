@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerModifier">
+   <children>
+      <HBox layoutX="100.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F29141;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="200.0" layoutY="20.0" text="Modifier Profil" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Text layoutX="17.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="17.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="17.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero de téléphone :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Nom" layoutX="86.0" layoutY="140.0" prefHeight="33.0" prefWidth="404.0" />
+      <TextField fx:id="Prenom" layoutX="116.0" layoutY="190.0" prefHeight="33.0" prefWidth="376.0" />
+      <TextField fx:id="NumTelephone" layoutX="277.0" layoutY="230.0" prefHeight="33.0" prefWidth="216.0" />
+      <Button fx:id="ModifierBTN" layoutX="455.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#ModifierEvent" style="-fx-background-color: #F29141; -fx-background-radius: 20;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
